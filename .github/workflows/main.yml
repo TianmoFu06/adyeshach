@@ -36,13 +36,13 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew clean build
 
-      # --- 新增的调试步骤 ---
-      - name: List files in the workspace
-        run: ls -R
+      # (可选) 您现在可以移除 ls -R 这个调试步骤了
+      # - name: List files in the workspace
+      #   run: ls -R
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: my-application-jar
-          path: build/libs/*.jar # 我们暂时保留这个路径，稍后根据调试结果修改
+          name: Adyeshach-Plugin-Jar # 您可以给产物起一个更具体的名字
+          path: plugin/build/libs/*.jar # <-- 已修正为正确的路径
 
