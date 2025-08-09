@@ -1,11 +1,11 @@
-name: Java CI with Gradle
+name: Java CI with Gradle for branch 2.1
 
 # 控制工作流的触发时机
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "2.1" ] # 仅在推送到 2.1 分支时触发
   pull_request:
-    branches: [ "main" ]
+    branches: [ "2.1" ] # 仅在向 2.1 分支发起拉取请求时触发
 
 # 定义一个或多个作业
 jobs:
